@@ -2,15 +2,19 @@
     "name": "server",
     "private": true,
     "version": "1.0.0",
-    "type": "module",
-    "main": "dist/src/index.js",
+    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
         "dev": "tsc --noEmit && tsx watch ./src/index.ts",
         "lint": "eslint 'src/**/*.{js,ts}' 'knexfile.ts'",
         "format": "eslint src/**/*.ts --fix",
-        "start": "node dist/src/index.js"
+        "start": "node dist/src/index.js",
+        "migrate:make": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts migrate:make $1",
+        "migrate:latest": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts migrate:latest",
+        "migrate:up": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts migrate:up",
+        "migrate:down": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts migrate:down",
+        "seed:run": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts seed:run"
     },
     "keywords": [],
     "author": "",
