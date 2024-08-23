@@ -7,6 +7,9 @@ export async function up(knex: Knex): Promise<void> {
             table.string('name').notNullable();
             table.string('symbol').notNullable();
             table.string('industry').notNullable();
+            table.integer('version').notNullable();
+            table.dateTime('creation_time').notNullable();
+            table.dateTime('update_time').notNullable();
         })
         .createTable('people', (table: Knex.CreateTableBuilder) => {
             table.increments('id').primary();
@@ -15,6 +18,7 @@ export async function up(knex: Knex): Promise<void> {
             table.string('email').notNullable();
             table.string('phone').notNullable();
             table.text('picture');
+            table.integer('version').notNullable();
             table.dateTime('creation_time').notNullable();
             table.dateTime('update_time').notNullable();
             table.integer('company_id').unsigned().notNullable();

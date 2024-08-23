@@ -62,3 +62,11 @@ export async function deleteById(personId: number): Promise<void> {
     const index = people.findIndex((person) => person.id === personId);
     people.splice(index, 1);
 }
+
+export async function findBy(criteria: Partial<People>): Promise<People[]> {
+    return people.filter((person) => {
+        return Object.keys(criteria).every((key) => {
+            return person[key as keyof People] === criteria[key as keyof People];
+        });
+    });
+}

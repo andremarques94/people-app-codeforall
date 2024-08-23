@@ -1,5 +1,4 @@
 import { Model } from 'objection';
-import { Company } from './company.model';
 import { generateTimestamp } from '../../../common/utils';
 
 export class People extends Model {
