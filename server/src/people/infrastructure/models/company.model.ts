@@ -1,4 +1,4 @@
-import { Model } from 'objection';
+import { Model, QueryBuilder } from 'objection';
 import { generateTimestamp } from '../../../common/utils';
 
 export class CompanyModel extends Model {
@@ -38,6 +38,14 @@ export class CompanyModel extends Model {
             industry: { type: 'string', minLength: 1, maxLength: 255 }
         }
     };
+
+    static get modifiers() {
+        return {
+            defaultSelects(builder: QueryBuilder<CompanyModel>) {
+                builder.select('id', 'name', 'symbol', 'industry');
+            }
+        };
+    }
 
     $beforeInsert() {
         this.creation_time = generateTimestamp();

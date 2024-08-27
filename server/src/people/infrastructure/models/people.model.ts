@@ -1,4 +1,5 @@
 import { Model } from 'objection';
+import { CompanyModel } from './company.model';
 import { generateTimestamp } from '../../../common/utils';
 
 export class PeopleModel extends Model {
@@ -16,11 +17,10 @@ export class PeopleModel extends Model {
     version!: number;
 
     static relationMappings = () => {
-        const Company = require('./company.model');
         return {
             company: {
                 relation: Model.BelongsToOneRelation,
-                modelClass: Company,
+                modelClass: CompanyModel,
                 join: {
                     from: 'people.company_id',
                     to: 'company.id'

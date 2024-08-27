@@ -2,7 +2,7 @@ import express, { json } from 'express';
 import cors from 'cors';
 import http from 'http';
 import knex from './common/database/db';
-import peopleRouter from './people/api/people.router';
+import peopleRouter from './people/application/people.router';
 
 const PORT = process.env.SERVERPORT || 3000;
 
