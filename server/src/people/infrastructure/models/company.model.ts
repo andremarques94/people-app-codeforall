@@ -1,7 +1,7 @@
 import { Model } from 'objection';
 import { generateTimestamp } from '../../../common/utils';
 
-export class Company extends Model {
+export class CompanyModel extends Model {
     static tableName = 'company';
 
     id!: number;

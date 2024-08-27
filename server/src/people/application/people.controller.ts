@@ -4,6 +4,7 @@ import { listPeople, getPersonById } from '../domain/people.service';
 export async function getAllPeople(req: Request, res: Response): Promise<void> {
     try {
         const people = await listPeople();
+        console.log(people);
         res.json(people);
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });

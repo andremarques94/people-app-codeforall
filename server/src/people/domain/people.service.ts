@@ -1,16 +1,24 @@
-import { People } from '../data-access/models/people.model';
-import { findAll, findById, updateById, deleteById } from '../data-access/repository/people.repository';
+import { PeopleRepository } from './people.repository.interface';
+import { People } from './people.interface';
 
-export async function listPeople(): Promise<People[]> {
-    return findAll();
-}
+export class PeopleService {
+    private peopleRepository: PeopleRepository;
 
-export async function getPersonById(id: string): Promise<People> {
-    const person = await findById(parseInt(id, 10));
-
-    if (!person) {
-        throw new Error('Person not found');
+    constructor(peopleRepository: PeopleRepository) {
+        this.peopleRepository = peopleRepository;
     }
 
-    return person;
+    async listPeople(): Promise<People[]> {
+        return await this.peopleRepository.findAll();
+    }
+
+    async getPersonById(id: string): Promise<People> {
+        const person = await this.peopleRepository.findById(parseInt(id, 10));
+
+        if (!person) {
+            throw new Error('Person not found');
+        }
+
+        return person;
+    }
 }
