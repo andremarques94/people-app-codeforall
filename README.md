@@ -25,3 +25,18 @@ Note:
 - You can use any npm module you see fit.
 - You can use a CSS pre/post-processor if you want.
 - You can use any build tool but I recoment Vite.
+
+## Wireframes
+
+### People List
+
+![People List](statement-materials/wireframe3.png)
+
+### People Detail
+
+![People Detail](./statement-materials/wireframe4.png)
+
+### Dark Mode
+
+![Dark Mode](./statement-materials/wireframe1.png)
+![Dark Mode Details](./statement-materials/wireframe2.png)
