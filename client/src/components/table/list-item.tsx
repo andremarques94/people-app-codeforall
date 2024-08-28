@@ -3,17 +3,17 @@ import PictureComponent from "../common/picture-component";
 import { BuildingOffice2Icon } from "@heroicons/react/16/solid";
 
 interface ListItemProps {
-  key: number;
+  id: number;
   person: Partial<People>;
   onClick: (id: number) => void;
 }
 
-const ListItem: React.FC<ListItemProps> = ({ key, person, onClick }) => {
+const ListItem: React.FC<ListItemProps> = ({ id, person, onClick }) => {
   const { first_name, last_name, company, picture } = person;
 
   return (
     <li
-      key={key}
+      key={id}
       onClick={() => person.id && onClick(person.id)}
       className="flex flex-row rounded-lg cursor-pointer m-2 justify-between items-center p-4
                  border border-gray-200 dark:border-gray-700

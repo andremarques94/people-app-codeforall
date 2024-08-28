@@ -14,8 +14,10 @@ Note:
 Create a Single Page Application application:
 
 - It must show a list of people fetched from your REST API
-- The list items should be draggable in order to be sorted
 - The user can see the details of the person (Modal) by clicking on said person on the list.
+- Extra: Implement dark mode
+- Extra: The list items should be draggable in order to be sorted
+- You have to respect the wireframes the best you can.
 
 Note:
 

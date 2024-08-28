@@ -37,7 +37,7 @@ function App() {
       >
         <DarkModeToggle />
       </Header>
-      <Table people={people} onClick={openModal} />
+      <Table people={people} onClick={openModal} onReorder={setPeople} />
       <DetailModal
         visible={modalOpen}
         onClose={closeModal}
