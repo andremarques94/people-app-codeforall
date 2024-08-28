@@ -8,6 +8,7 @@ Create a REST API backed by a MySQL OR PostgreSQL instance that exposes the foll
 Note:
 
 - The source of the data served by the API should always be PostgreSQL/MySQL.
+- Use the data.json file to populate the database.
 
 ## Frontend
 
