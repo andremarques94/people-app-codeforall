@@ -1,24 +1,14 @@
 import { useEffect, useState } from "react";
-
-interface People {
-  id: number;
-  first_name: string;
-  last_name: string;
-  email: string;
-  phone: string;
-  picture: string;
-  company?: Company | undefined;
-}
-
-interface Company {
-  id: number;
-  name: string;
-  symbol: string;
-  industry: string;
-}
+import { People } from "./types/People";
+import Table from "./components/table/table";
+import DarkModeToggle from "./components/common/dark-mode-toggle";
+import Header from "./components/common/header";
+import DetailModal from "./components/detail/modal";
 
 function App() {
   const [people, setPeople] = useState<People[]>([]);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [selectedPerson, setSelectedPerson] = useState<number | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -28,17 +18,31 @@ function App() {
     })();
   }, []);
 
+  const openModal = (id: number) => {
+    setModalOpen(true);
+    setSelectedPerson(id);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedPerson(null);
+  };
+
   return (
     <>
-      {people.map((person: People) => (
-        <div key={person.id}>
-          <h1>
-            {person.first_name} {person.last_name}
-          </h1>
-          <p>{person.email}</p>
-          <p>{person.phone}</p>
-        </div>
-      ))}
+      <Header
+        url={
+          "https://codeforall.com/hs-fs/hubfs/Antigo-vs-novo_branco_500x90.gif?width=1000&height=180&name=Antigo-vs-novo_branco_500x90.gif"
+        }
+      >
+        <DarkModeToggle />
+      </Header>
+      <Table people={people} onClick={openModal} />
+      <DetailModal
+        visible={modalOpen}
+        onClose={closeModal}
+        id={selectedPerson}
+      />
     </>
   );
 }

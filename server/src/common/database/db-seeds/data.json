@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@gmail.com",
+        "phone": "123-456-7890",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/42.jpg",
+        "company": { "id": 1, "name": "Code for All_", "symbol": "CFA", "industry": "Technology" }
+    },
+    {
+        "id": 2,
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "email": "jane.doe@gmail.com",
+        "phone": "123-456-7890",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/female/3.jpg",
+        "company": { "id": 1, "name": "Code for All_", "symbol": "CFA", "industry": "Technology" }
+    },
+    {
+        "id": 3,
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@gmail.com",
+        "phone": "123-456-7890",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/42.jpg",
+        "company": { "id": 2, "name": "Apple INC", "symbol": "AAPL", "industry": "Technology" }
+    },
+    {
+        "id": 4,
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "email": "jane.doe@gmail.com",
+        "phone": "123-456-7890",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/female/3.jpg",
+        "company": { "id": 3, "name": "Microsoft", "symbol": "MSFT", "industry": "Technology" }
+    },
+    {
+        "id": 5,
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@gmail.com",
+        "phone": "123-456-7890",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/42.jpg",
+        "company": { "id": 2, "name": "Apple INC", "symbol": "AAPL", "industry": "Technology" }
+    },
+    {
+        "id": 6,
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "email": "jane.doe@gmail.com",
+        "phone": "123-456-7890",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/female/3.jpg",
+        "company": { "id": 1, "name": "Code for All_", "symbol": "CFA", "industry": "Technology" }
+    }
+]

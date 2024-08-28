@@ -1,6 +1,6 @@
 ## Backend
 
-Create a Node.js REST API backed by a MySQL OR PostgreSQL instance that exposes the following data:
+Create a REST API backed by a MySQL OR PostgreSQL instance that exposes the following data:
 
 - People: an endpoint providing a list of available people information with some overview data.
 - People Detail - an endpoint providing all the fields related to a Person.
@@ -8,7 +8,6 @@ Create a Node.js REST API backed by a MySQL OR PostgreSQL instance that exposes 
 Note:
 
 - The source of the data served by the API should always be PostgreSQL/MySQL.
-- Pagination should be taken in consideration (Extra)
 
 ## Frontend
 
