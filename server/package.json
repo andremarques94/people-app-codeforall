@@ -2,7 +2,7 @@
     "name": "server",
     "private": true,
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "dist/src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
@@ -14,7 +14,9 @@
         "migrate:latest": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts migrate:latest",
         "migrate:up": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts migrate:up",
         "migrate:down": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts migrate:down",
-        "seed:run": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts seed:run"
+        "seed:run": "node --loader ts-node/esm ./node_modules/.bin/knex --knexfile ./src/common/database/knexfile.ts seed:run",
+        "setup": "npm run migrate:down && npm run migrate:up && npm run seed:run",
+        "clean": "rm -rf dist && rm -rf node_modules"
     },
     "keywords": [],
     "author": "",

@@ -1,0 +1,36 @@
+{
+  "name": "fullstack-app",
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:server dev:client",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm-run-all --parallel build:client build:server",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "clean": "npm run clean:client && npm run clean:server && rm -rf node_modules && rm -rf package-lock.json",
+    "clean:client": "npm --prefix client run clean",
+    "clean:server": "npm --prefix server run clean",
+    "setup": "npm --prefix server run setup",
+    "start:server": "npm --prefix server run start",
+    "start:client": "npm --prefix client run preview",
+    "preview": "npm-run-all --parallel start:server start:client",
+    "install": "npm-run-all --parallel install:client install:server",
+    "install:client": "npm --prefix client install",
+    "install:server": "npm --prefix server install",
+    "lint": "npm-run-all --parallel lint:client lint:server",
+    "lint:client": "npm --prefix client run lint",
+    "lint:server": "npm --prefix server run lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
