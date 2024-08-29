@@ -31,13 +31,13 @@ Note:
 
 ### People List
 
-![People List](statement-materials/wireframe3.png)
+![People List](statement-materials/wireframe1.png)
 
 ### People Detail
 
-![People Detail](./statement-materials/wireframe4.png)
+![People Detail](./statement-materials/wireframe2.png)
 
 ### Dark Mode
 
-![Dark Mode](./statement-materials/wireframe1.png)
-![Dark Mode Details](./statement-materials/wireframe2.png)
+![Dark Mode](./statement-materials/wireframe3.png)
+![Dark Mode Details](./statement-materials/wireframe4.png)
